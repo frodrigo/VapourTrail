@@ -95,7 +95,7 @@ function filter_on_one_route(route) {
     var route_info = document.getElementById('route_info')
     route_info.innerHTML = create_route_medata(route);
 
-    const stop_list_url = `/api/routes_${route.rel_osm_id}.json`;
+    const stop_list_url = `api/routes_${route.rel_osm_id}.json`;
     fetch(stop_list_url)
         .then(function(data) {
             return data.json()
